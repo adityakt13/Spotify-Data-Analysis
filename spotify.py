@@ -27,7 +27,7 @@ if show_data:
     st.subheader('Spotify Data')
     st.dataframe(spotify, use_container_width=True)
 
-genre = st.sidebar.selectbox('Select genre', spotify['genre'].unique())
+genre = st.sidebar.selectbox('Select genre', spotify['genre'])
 subset = spotify[spotify['genre'] == genre] # filter
 
 tabs = st.tabs(['Data','Univariate Analysis','Bivariate Analysis', 'Trivariate Analysis'])
